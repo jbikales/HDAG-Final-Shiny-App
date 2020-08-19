@@ -72,8 +72,8 @@ server <- function(input, output) {
                                      "Day from Feb. 16:", id, "<br>",
                                      "% Change Mobility:", workplaces_percent_change_from_baseline, "<br>",
                                     "% Change AQI:", value))) +
-            geom_point(color = "blue") +
-            geom_point(aes(x = id, y = value), color = "red") +
+            geom_point(color = "#00BFC4") +
+            geom_point(aes(x = id, y = value), color = "#F8766D") +
             ylab("Percent Change from Baseline") +
             xlab("Day (from Feb 16, 2020)") 
             
@@ -87,8 +87,8 @@ server <- function(input, output) {
                       input$county == '3' ~ "Hennepin County, MN",
                       input$county == '4' ~ "Hawaii County, HI",
                       input$county == '5' ~ "Suffolk County, MA",
-                      input$county == '5' ~ "San Juan County, NM",
-                      input$county == '5' ~ "San Joaquin County, CA"),
+                      input$county == '6' ~ "San Juan County, NM",
+                      input$county == '7' ~ "San Joaquin County, CA"),
             "Mobility vs AQI")
     })
     
